@@ -34,4 +34,38 @@ public class Taller01 {
         }
     }
 
-}
+    void matriz() {
+        System.out.println("Inserte la cantidad de filas: ");
+        int fila = Integer.parseInt(scanner.nextLine());
+        System.out.println("Inserte la cantidad de columnas: ");
+        int colum = Integer.parseInt(scanner.nextLine());
+        validarDimensiones(fila, colum);
+
+    }
+
+    int[][] crearMatriz(int filas, int cols) {
+        return new int[filas][cols];
+        llenarMatriz();
+    }
+    boolean validarDimensiones(int filas,int cols) {
+        if (filas > 0) {
+            if (cols > 0){
+                crearMatriz(filas, cols);
+            }
+            else {
+                System.out.println("Ingrese un dato valido");
+                return;
+            }
+        }
+        else {
+            System.out.println("Ingrese un dato valido");
+            return;
+
+        }
+        void llenarMatriz(int matriz [ ][ ]) {
+            for (int i = 0; i < matriz.length; i++) {
+                for (int j = 0; j < matriz[i].length; j++) {
+                    matriz[i][j] = 0;
+                }
+            }
+        }
